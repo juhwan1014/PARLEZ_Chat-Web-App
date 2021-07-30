@@ -1,0 +1,130 @@
+/*--------------------------------------------------------------
+# CHAT SINGULAR
+--------------------------------------------------------------*/
+.ChatList {
+  li {
+    margin-bottom: 20px;
+
+    button {
+      cursor: pointer;
+      color: red;
+    }
+  }
+
+  .chat__container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+
+  .chat__col.right {
+    text-align: left;
+    position: relative;
+    width: 100%;
+
+    &::after {
+      content: "";
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      border-right: 7px solid $light-black;
+      position: absolute;
+      top: 7px;
+      left: -7px;
+
+    }
+
+    .messageBody {
+      @include body-light;
+      background: $light-black;
+      padding: 20px;
+      border-radius: 2px;
+      line-height: 1.4em;
+      gap: 0;
+      width: 100%;
+    }
+
+    .messageBody .username {
+      @include body-regular;
+      display: block;
+      margin-bottom: 7px;
+    }
+
+    .messageMeta {
+      @include body-light;
+      font-size: .8em;
+      margin-top: 10px;
+    }
+  }
+
+  .chat__col.left {
+    max-width: 80px;
+
+    .img-container {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+      object-position: center center;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    .rating {
+      @include body-light;
+      opacity: 0;
+    }
+
+    .rating__container {
+      display: flex;
+      flex-direction: column;
+      margin-top: 7px;
+    }
+
+    .rating__container span {
+      padding: 3px 0;
+    }
+
+    .rating__container svg {
+      width: 15px;
+      fill: $grey;
+    }
+
+    .rating__container button {
+      cursor: pointer;
+    }
+  }
+
+  // SET ALL ODD MESSAGE STYLES
+  & .Chat > li:nth-child(odd) > .chat__container{
+    display: flex;
+    flex-direction: row-reverse;
+
+    .messageMeta {
+      text-align: right;
+    }
+
+    .chat__col.right {
+      text-align: left;
+      position: relative;
+  
+      &::after {
+        content: "";
+        border-top: 7px solid transparent;
+        border-bottom: 7px solid transparent;
+        border-left: 7px solid $light-black;
+        border-right: unset;
+        position: absolute;
+        top: 7px;
+        right: -7px;
+        left: unset;
+      }
+    }
+  }
+}

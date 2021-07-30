@@ -1,0 +1,180 @@
+section.Login {
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px;
+    max-width: 350px;
+    min-width: 320px;
+    min-height: calc(500px + 84px);
+    margin: auto;
+    justify-content: space-around;
+}
+
+.form__container {
+    background: $black;
+    border-radius: 3px;
+}
+
+.modal.active {
+    height: 100%;
+    display: flex;
+}
+
+.modal-form {
+    padding: 10px 20px;
+}
+
+.Login .fieldset,
+.Register .fieldset {
+    line-height: 30px;
+    display: flex;
+    padding: 5px 0;
+    border-bottom: 1px $dark-grey solid;
+    width: 100%;
+    margin-bottom: 15px;
+
+    input#file-upload-button {
+        border: $dark-grey;
+        color: white;
+        background: $black;
+    }
+
+    &.label {
+        border-bottom: unset;
+        margin-bottom: 0;
+        @include body-light;
+    }
+    svg {
+        max-width: 20px;
+        margin-right: 15px;
+        fill: #333333;
+        margin-top: 3px;
+    }
+
+    input {
+        border: none;
+        background-image: none;
+        background-color: transparent;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        font-size: 1.2em;
+        padding: 5px 2px;
+        width: 100%;
+        outline: none;
+        color: white;
+    }
+}
+
+.fieldset.submit {
+    border-bottom: unset;
+}
+
+button.submit {
+    width: 100%;
+    display: block;
+    font-size: 1.2em;
+    background: $light-ruby;
+    outline: unset;
+    border: unset;
+    color: white;
+    border-radius: 2px;
+    padding: 7px 0;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    @include body-light;
+    transition: 0.2s ease-in-out;
+
+    &:hover,
+    &:focus,
+    &:active {
+        filter: brightness(50%);
+    }
+}
+
+button.exit {
+    margin-right: 0;
+    margin-left: auto;
+    display: block;
+    border: unset;
+    background: unset;
+    cursor: pointer;
+    color: #cecece;
+
+    svg {
+        fill: #cecece;
+    }
+}
+
+.modal-footer {
+    text-align: center;
+    background: $light-black;
+    padding: 10px 30px;
+    border-top: 1px solid $dark-grey;
+
+    p {
+        font-size: 0.9em;
+    }
+
+    a {
+        text-decoration: none;
+        color: $light-ruby;
+        &:hover,
+        &:focus,
+        &:active {
+            filter: brightness(50%);
+        }
+    }
+}
+
+.modal-title {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0;
+    color: white;
+    font-weight: 400;
+    margin-bottom: 15px;
+    @include body-regular;
+    padding-top: 20px;
+}
+
+.em__container {
+    margin-top: -150px;
+    background: $light-ruby;
+    padding: 14px;
+
+    .em__wrap {
+        display: flex;
+    }
+
+    svg {
+        fill: white;
+    }
+
+    p {
+        color: white;
+        text-align: left;
+        margin-left: 14px;
+    }
+}
+
+.Login .active1 {
+    margin-bottom: 7px;
+}
+
+.Login .em__container {
+    margin-top: auto;
+    padding: 7px;
+    background: rgba($color: $light-ruby, $alpha: 0.5);
+    border-radius: 3px;
+    border: 1px solid $light-ruby;
+    margin-bottom: 7px;
+
+    p {
+        font-size: 12px;
+        margin-left: 7px;
+    }
+
+    svg {
+        height: 12px;
+    }
+}

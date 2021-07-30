@@ -1,0 +1,159 @@
+/*--------------------------------------------------------------
+# SUBMIT CHAT MESSAGE
+--------------------------------------------------------------*/
+.SubmitMessage {
+  border-top: 1px solid $light-black;
+  background: $light-black;
+  position: relative;
+  max-height: 700px;
+  -webkit-box-shadow: 0px 0px 24px 9px rgba(0,0,0,0.25); 
+  box-shadow: 0px 0px 24px 9px rgba(0,0,0,0.25);
+
+  button.refresh {
+    display: flex;
+    @include body-light;
+    gap: 10px;
+    background: $light-ruby;
+    border-radius: 3px;
+    margin: auto;
+    padding: 3px 7px;
+    cursor: pointer;
+    margin-top: -7px;
+    margin-right: 20px;
+    position: relative;
+    z-index: 500;
+
+    span {
+      position: absolute;
+      text-align: center;
+      border-radius: 2px;
+      width: 120px;
+      left: -100px;
+      top: -25px;
+      background: rgba($color: #000000, $alpha: 0.5);
+      font-size: 12px !important;
+      padding: 3px 4px;
+      opacity: 0;
+      transition: .2s ease-in-out;
+
+    }
+
+    svg {
+      width: 17px;
+      fill: white;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      span {
+        opacity: 1;
+      }
+    }
+  }
+
+  .em__container {
+    position: absolute;
+    bottom: calc(100% + 7px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: $light-ruby;
+    padding: 14px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0; 
+      height: 0; 
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 7px solid $light-ruby;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 100%;
+    }
+
+    .em__wrap {
+      display: flex;
+    }
+
+    svg {
+      fill: white;
+    }
+
+    p {
+      color: white;
+      text-align: left;
+      margin-left: 14px;
+    }
+  }
+
+  .sm__wrap {
+    padding: 14px 20px;
+  }
+
+  form label,
+  form input,
+  form textarea  {
+    width: 100%;
+  }
+
+  form input,
+  form textarea {
+    padding: 7px 0;
+    padding-bottom: 14px;
+    border: unset;
+    border-bottom: 1px solid $dark-grey;
+    background: $light-black;
+    color: white;
+    outline: none;
+    @include body-light;
+    font-size: 17px;
+
+    &:focus,
+    &:active {
+      border-bottom: 1px solid $light-ruby;
+      color: $light-ruby;
+    }
+  }
+
+  form button {
+    background: $light-ruby;
+    padding: 7px 30px;
+    @include body-regular;
+    text-transform: uppercase;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: $dark-ruby;
+    }
+  }
+
+  form label p {
+    text-align: left;
+    color: $dark-grey;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    margin-bottom: 7px;
+    font-size: 12px;
+  }
+
+  .fieldset {
+    display: flex;
+    
+    &.submit {
+      justify-content: flex-end;
+      margin-top: 30px;
+      
+      button {
+        width: 100%;
+        padding: 10px;
+        font-size: 17px;
+      }
+    }
+  }
+}

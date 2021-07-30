@@ -1,0 +1,60 @@
+/*--------------------------------------------------------------
+# CHAT BLOCKER
+--------------------------------------------------------------*/
+.ChatBlocker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 300;
+  backdrop-filter: grayscale(0.5) blur(4px);
+  background-color: rgba($color: #000, $alpha: 0.76)
+}
+
+.cb__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+
+  h2, p {
+    margin: auto;
+    color: white;
+    margin-bottom: 7px;
+  }
+
+  svg {
+    margin: auto;
+    height: 75px;
+    width: 75px;
+    fill: white;
+    margin-bottom: 30px;
+  }
+}
+
+.cb__buttons {
+  max-width: 300px;
+  display: flex;
+  margin: auto;
+  margin-top: 30px;
+  gap: 15px;
+
+  button, Link
+  a {
+    text-align: center;
+    width: 100%;
+    @include body-regular;
+    background: $light-ruby;
+    cursor: pointer;
+    padding: 7px 14px;
+    border: 1px solid $dark-ruby;
+    transition: .2s ease-in-out;
+
+    &:hover,
+    &:focus,
+    &:active {
+      filter: brightness(50%);
+    }
+  }
+}

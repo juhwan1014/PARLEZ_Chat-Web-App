@@ -1,0 +1,178 @@
+/*--------------------------------------------------------------
+# Headings
+--------------------------------------------------------------*/
+* h1{
+    @include heading-bold;
+    color: $white;
+    letter-spacing: .05em;
+    font-size: 50px;
+    text-transform: uppercase;
+  
+    @media screen and (min-width: 767px){
+        font-size: 60px;
+    }
+  
+    @media screen and (min-width: 1144px){
+        font-size: 100px;
+    }
+  }
+  
+  * h1.regular{
+    @include heading-regular;
+    color: $white;
+    letter-spacing: .05em;
+    font-size: 50px;
+  
+    @media screen and (min-width: 767px){
+        font-size: 60px;
+    }
+  
+    @media screen and (min-width: 1144px){
+        font-size: 100px;
+    }
+  }
+  
+  * h2{
+    @include heading-bold;
+    color: $white;
+    letter-spacing: .05em;
+    font-size: 25px;
+    text-transform: uppercase;
+  
+    @media screen and (min-width: 767px){
+        font-size: 35px;
+    }
+  
+    @media screen and (min-width: 1144px){
+        font-size: 50px;
+    }
+  }
+  
+  * h2.regular{
+    @include heading-regular;
+    color: $white;
+    letter-spacing: .05em;
+    font-size: 25px;
+    text-transform: uppercase;
+  
+    @media screen and (min-width: 767px){
+        font-size: 35px;
+    }
+  
+    @media screen and (min-width: 1144px){
+        font-size: 50px;
+    }
+  }
+  
+  * h3 {
+    @include heading-regular;
+    color: $grey;
+    letter-spacing: .05em;
+    font-size: 17px;
+    text-transform: uppercase;
+    line-height: 1.2em;
+  
+    &.center {
+        text-align: center;
+    }
+  
+  }
+  
+  * h3.white {
+    @include heading-regular;
+    color: $white;
+    letter-spacing: .05em;
+    font-size: 17px;
+  }
+  
+  * h4 {
+    @include heading-regular;
+    color: $grey;
+    letter-spacing: .05em;
+    font-size: 17px;
+    line-height: 1.2em;
+  
+    &.center {
+        text-align: center;
+    }
+  
+    &.light {
+        @include heading-light;
+    }
+  
+    &.uppercase {
+        text-transform: uppercase;
+    }
+  
+    &.highlight {
+        color: $light-green;
+    }
+  
+    @media screen and (min-width: 767px){
+        font-size: 25px;
+    }
+  }
+  
+  * h4.white {
+    @include heading-regular;
+    color: $white;
+    letter-spacing: .05em;
+    font-size: 17px;
+  
+    @media screen and (min-width: 767px){
+        font-size: 25px;
+    }
+  }
+  
+  /*--------------------------------------------------------------
+  # Body
+  --------------------------------------------------------------*/
+  
+  * p {
+    @include body-light;
+    max-width: 500px;
+    color: $grey;
+    line-height: 1.3em;
+    font-size: 14px;
+  
+    @media screen and (min-width: 500px){
+        font-size: 17px;
+    }
+  }
+  
+  * p.white {
+    @include body-light;
+    max-width: 500px;
+    color: $white;
+    line-height: 1.3em;
+    font-size: 14px;
+  
+    @media screen and (min-width: 500px){
+        font-size: 17px;
+    }
+  }
+  
+  * p.grey {
+    @include body-light;
+    max-width: 500px;
+    color: $grey;
+    line-height: 1.3em;
+    font-size: 14px;
+  
+    @media screen and (min-width: 500px){
+        font-size: 17px;
+    }
+  }
+  
+  
+  * p.dark-grey {
+    @include body-light;
+    max-width: 500px;
+    color: $dark-grey;
+    line-height: 1.3em;
+    font-size: 14px;
+  
+    @media screen and (min-width: 500px){
+        font-size: 17px;
+    }
+  }

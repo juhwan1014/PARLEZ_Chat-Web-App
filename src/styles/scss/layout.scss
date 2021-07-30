@@ -1,0 +1,32 @@
+body {
+    background: #121212;
+  }
+  
+  section.default {
+    position: relative;
+  
+    .wrap {
+      max-width: 1800px;
+      padding: 0 15px;
+      margin: auto;
+  
+      @media screen and (min-width: 767px){
+        padding: 0 40px;
+      }
+    }
+  
+    &.v-no-padding {
+      padding-top: 0;
+      padding-bottom: 0;
+    } 
+  }
+  
+  .svg-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .col-flex {
+    display: flex;
+  }
